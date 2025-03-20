@@ -5,10 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="src/icon.png" type="image/x-icon">
-  <link rel='stylesheet'
+  <meta name="description" content="EaseQR is a fast and efficient QR code generator with temporary file hosting. Share links, documents, and text securely and quickly with automatic expiration.">
+  <meta name="keywords" content="QR code, QR code generator, temporary file hosting, file sharing, secure transfer, automatic expiration, share documents">
+  <meta name="author" content="Vinícius">
+  <meta property="og:title" content="EaseQR - Quick and Secure QR Code Generator">
+  <meta property="og:description" content="Create and share QR codes for links, text, and files with temporary hosting. Fast and secure transfers with expiration.">
+  <meta property="og:image" content="src/icon.png">
+  <meta property="og:url" content="https://vxncius-dev.github.io/EaseQR/">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet"
     href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-  <title>EaseQR</title>
+  <title>EaseQR - Secure QR Code Generator with Temporary File Hosting</title>
   <link rel="stylesheet" href="src/style.css">
   <script src="src/main.js" defer></script>
 </head>
@@ -16,38 +24,39 @@
 <body>
   <div id="container" class="border">
     <div class="inputs">
-      <input type="text" id="textInput" placeholder="Enter text or paste a link">
+      <input type="text" id="textInput" placeholder="Enter text or paste a link" aria-label="Text input for link or text">
       <input type="file" id="fileInput" hidden>
-      <label for="fileInput" class="button" title="Upload file">
-        <i class="fi fi-rr-file-upload"></i>
+      <label for="fileInput" class="button" title="Upload file" aria-label="Upload a file">
+        <i class="fi fi-rr-file-upload" aria-hidden="true"></i>
       </label>
     </div>
-    <div id="qrcode"></div>
+    <div id="qrcode" aria-live="polite"></div>
   </div>
 
   <div id="fileDescription" class="border" style="display:none;opacity:0;transform: translateY(100px);">
-    <img src="" alt="fileUploaded" width="60" height="40">
+    <img src="" alt="File uploaded preview" width="60" height="40">
     <span>
-      <p id="typeSize"></p>
-      <p id="fileName"></p>
+      <p id="typeSize" aria-label="File type and size"></p>
+      <p id="fileName" aria-label="File name"></p>
     </span>
-    <button type="button" id="delete" title="Delete file uploaded">
-      <i class="fi fi-rr-delete"></i>
+    <button type="button" id="delete" title="Delete file uploaded" aria-label="Delete uploaded file">
+      <i class="fi fi-rr-delete" aria-hidden="true"></i>
     </button>
   </div>
+
   <ul>
     <li>
-      <img src="https://img.icons8.com/?size=64&id=3tC9EQumUAuq&format=png" alt="GitHub" width="20" />
-      <a href="https://github.com/vxncius-dev" target="_blank"><span>Vxncius</span></a>
+      <img src="https://img.icons8.com/?size=64&id=3tC9EQumUAuq&format=png" alt="GitHub logo" width="20" />
+      <a href="https://github.com/vxncius-dev" target="_blank" rel="noopener noreferrer"><span>Vxncius</span></a>
     </li>
     <li>
-      <img src="https://img.icons8.com/?size=24&id=bkAOr56f6fj1&format=png" alt="QRCode.js" width="20" />
-      <a href="https://davidshimjs.github.io/qrcodejs/" target="_blank"><span>QRCode.js</span></a>
+      <img src="https://img.icons8.com/?size=24&id=bkAOr56f6fj1&format=png" alt="QRCode.js logo" width="20" />
+      <a href="https://davidshimjs.github.io/qrcodejs/" target="_blank" rel="noopener noreferrer"><span>QRCode.js</span></a>
     </li>
     <li>
-      <img src="https://cdn4.iconfinder.com/data/icons/colicon/24/cloud_upload_arrow-512.png" alt="Tmpfiles.org"
+      <img src="https://cdn4.iconfinder.com/data/icons/colicon/24/cloud_upload_arrow-512.png" alt="Tmpfiles.org logo"
         width="20" style="transform: scaleX(-1);filter: saturate(.9);" />
-      <a href="https://tmpfiles.org/" target="_blank"><span>Tmpfiles.org</span></a>
+      <a href="https://tmpfiles.org/" target="_blank" rel="noopener noreferrer"><span>Tmpfiles.org</span></a>
     </li>
   </ul>
 </body>

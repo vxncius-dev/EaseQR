@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="src/icon.png" type="image/x-icon">
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <title>EaseQR</title>
+  <link rel="stylesheet" href="src/style.css">
+  <script src="src/main.js" defer></script>
+</head>
+
+<body>
+  <div id="container" class="border">
+    <div class="inputs">
+      <input type="text" id="textInput" placeholder="Enter text or paste a link">
+      <input type="file" id="fileInput" hidden>
+      <label for="fileInput" class="button" title="Upload file">
+        <i class="fi fi-rr-file-upload"></i>
+      </label>
+    </div>
+    <div id="qrcode"></div>
+  </div>
+
+  <div id="fileDescription" class="border" style="display:none;opacity:0;transform: translateY(100px);">
+    <img src="" alt="fileUploaded" width="60" height="40">
+    <span>
+      <p id="typeSize"></p>
+      <p id="fileName"></p>
+    </span>
+    <button type="button" id="delete" title="Delete file uploaded">
+      <i class="fi fi-rr-delete"></i>
+    </button>
+  </div>
+  <ul>
+    <li>
+      <img src="https://img.icons8.com/?size=64&id=3tC9EQumUAuq&format=png" alt="GitHub" width="20" />
+      <a href="https://github.com/vxncius-dev" target="_blank"><span>Vxncius</span></a>
+    </li>
+    <li>
+      <img src="https://img.icons8.com/?size=24&id=bkAOr56f6fj1&format=png" alt="QRCode.js" width="20" />
+      <a href="https://davidshimjs.github.io/qrcodejs/" target="_blank"><span>QRCode.js</span></a>
+    </li>
+    <li>
+      <img src="https://cdn4.iconfinder.com/data/icons/colicon/24/cloud_upload_arrow-512.png" alt="Tmpfiles.org"
+        width="20" style="transform: scaleX(-1);filter: saturate(.9);" />
+      <a href="https://tmpfiles.org/" target="_blank"><span>Tmpfiles.org</span></a>
+    </li>
+  </ul>
+</body>
+
+</html>
